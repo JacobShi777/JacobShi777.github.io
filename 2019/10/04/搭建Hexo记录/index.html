@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Jacob&#39;s Blog">
 <meta property="og:description" content="搭建Hexo记录 参考的Blogs： Mac+Hexo+GitHub搭建博客教程 以下所有操作均在Mac上。  1、搭建环境1.1 安装Node.js和Git12brew install node(google how to install git)  1.2 安装Hexo“-g” 表示全局安装 1sudo npm install -g hexo  2、博客初始化新建一个目录（如myblog），然">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-04T15:17:16.678Z">
+<meta property="og:updated_time" content="2019-10-04T15:27:42.082Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建Hexo记录">
 <meta name="twitter:description" content="搭建Hexo记录 参考的Blogs： Mac+Hexo+GitHub搭建博客教程 以下所有操作均在Mac上。  1、搭建环境1.1 安装Node.js和Git12brew install node(google how to install git)  1.2 安装Hexo“-g” 表示全局安装 1sudo npm install -g hexo  2、博客初始化新建一个目录（如myblog），然">
@@ -346,16 +346,16 @@
 <p><a href="https://zhuanlan.zhihu.com/p/34654952" target="_blank" rel="noopener">Mac+Hexo+GitHub搭建博客教程</a></p>
 <p>以下所有操作均在Mac上。</p>
 </blockquote>
-<h4 id="1、搭建环境"><a href="#1、搭建环境" class="headerlink" title="1、搭建环境"></a>1、搭建环境</h4><h5 id="1-1-安装Node-js和Git"><a href="#1-1-安装Node-js和Git" class="headerlink" title="1.1 安装Node.js和Git"></a>1.1 安装Node.js和Git</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br><span class="line">(google how to install git)</span><br></pre></td></tr></table></figure>
+<h2 id="1、搭建环境"><a href="#1、搭建环境" class="headerlink" title="1、搭建环境"></a>1、搭建环境</h2><h3 id="1-1-安装Node-js和Git"><a href="#1-1-安装Node-js和Git" class="headerlink" title="1.1 安装Node.js和Git"></a>1.1 安装Node.js和Git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br><span class="line">(google how to install git)</span><br></pre></td></tr></table></figure>
 
-<h5 id="1-2-安装Hexo"><a href="#1-2-安装Hexo" class="headerlink" title="1.2 安装Hexo"></a>1.2 安装Hexo</h5><p>“-g” 表示全局安装</p>
+<h3 id="1-2-安装Hexo"><a href="#1-2-安装Hexo" class="headerlink" title="1.2 安装Hexo"></a>1.2 安装Hexo</h3><p>“-g” 表示全局安装</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
 
-<h4 id="2、博客初始化"><a href="#2、博客初始化" class="headerlink" title="2、博客初始化"></a>2、博客初始化</h4><p>新建一个目录（如myblog），然后在此目录中进行操作。</p>
+<h2 id="2、博客初始化"><a href="#2、博客初始化" class="headerlink" title="2、博客初始化"></a>2、博客初始化</h2><p>新建一个目录（如myblog），然后在此目录中进行操作。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mkdir myblog</span><br><span class="line">cd myblog</span><br><span class="line">hexo init</span><br><span class="line">sudo npm install</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <p>执行以上操作，即可通过提示的地址（我的是<a href="http://localhost:4000），查看初始化后的本地博客。" target="_blank" rel="noopener">http://localhost:4000），查看初始化后的本地博客。</a></p>
-<h4 id="3、关联Github"><a href="#3、关联Github" class="headerlink" title="3、关联Github"></a>3、关联Github</h4><p>在Github上新建一个username.github.io的repo。username为github的用户名。</p>
+<h2 id="3、关联Github"><a href="#3、关联Github" class="headerlink" title="3、关联Github"></a>3、关联Github</h2><p>在Github上新建一个username.github.io的repo。username为github的用户名。</p>
 <p>然后修改myblog下的配置文件_config.yml，把deploy改为（注意空格）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:JacobShi777/JacobShi777.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
@@ -365,7 +365,16 @@
 
 <p>hexo g出错则执行<code>npm install hexo --save</code>，hexo d出错则执行<code>npm install hexo-deployer-git --save</code>。</p>
 <p>之后便可以通过访问<code>jacobshi777.github.io</code>进行访问。</p>
-<h4 id="4、视觉-功能"><a href="#4、视觉-功能" class="headerlink" title="4、视觉/功能"></a>4、视觉/功能</h4>
+<h2 id="4、视觉-功能"><a href="#4、视觉-功能" class="headerlink" title="4、视觉/功能"></a>4、视觉/功能</h2><h3 id="4-1-主题设置"><a href="#4-1-主题设置" class="headerlink" title="4.1 主题设置"></a>4.1 主题设置</h3><p>Google Hexo的主题，选择自己喜欢的下载。这里，我选择了<code>hexo-theme-next</code>作为主题。方法如下：</p>
+<p>1、 在myblog下下载主题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>themes/next</code>的意思是把下载的文件放在myblog下themes文件夹中，并命名为next。</p>
+<p>2、 修改myblog下的配置<code>_config.yml</code>，把<code>theme: landscape</code>改为<code>theme: next</code>即可。</p>
+<p>3、 最后执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
@@ -520,7 +529,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建Hexo记录"><span class="nav-number">1.</span> <span class="nav-text">搭建Hexo记录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、搭建环境"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">1、搭建环境</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-安装Node-js和Git"><span class="nav-number">1.0.0.1.1.</span> <span class="nav-text">1.1 安装Node.js和Git</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-安装Hexo"><span class="nav-number">1.0.0.1.2.</span> <span class="nav-text">1.2 安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、博客初始化"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">2、博客初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、关联Github"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">3、关联Github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、视觉-功能"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">4、视觉/功能</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建Hexo记录"><span class="nav-number">1.</span> <span class="nav-text">搭建Hexo记录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、搭建环境"><span class="nav-number">1.1.</span> <span class="nav-text">1、搭建环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-安装Node-js和Git"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 安装Node.js和Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-安装Hexo"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、博客初始化"><span class="nav-number">1.2.</span> <span class="nav-text">2、博客初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、关联Github"><span class="nav-number">1.3.</span> <span class="nav-text">3、关联Github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、视觉-功能"><span class="nav-number">1.4.</span> <span class="nav-text">4、视觉/功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-主题设置"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1 主题设置</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

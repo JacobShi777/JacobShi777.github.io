@@ -366,16 +366,28 @@
 
 <p>hexo g出错则执行<code>npm install hexo --save</code>，hexo d出错则执行<code>npm install hexo-deployer-git --save</code>。</p>
 <p>之后便可以通过访问<code>jacobshi777.github.io</code>进行访问。</p>
-<h2 id="4、视觉-功能"><a href="#4、视觉-功能" class="headerlink" title="4、视觉/功能"></a>4、视觉/功能</h2><h3 id="4-1-主题设置"><a href="#4-1-主题设置" class="headerlink" title="4.1 主题设置"></a>4.1 主题设置</h3><p>Google Hexo的主题，选择自己喜欢的下载。这里，我选择了<code>hexo-theme-next</code>作为主题。方法如下：</p>
-<p>1、 在myblog下下载主题。</p>
+<h2 id="4、备份文件"><a href="#4、备份文件" class="headerlink" title="4、备份文件"></a>4、备份文件</h2><p>我是在5.1主题设置进行备份的。具体方法是：</p>
+<ol>
+<li>先在github上新建一个的repo。（不想在<code>username.github.io</code>里备份的话）</li>
+<li>在原来的<code>myblog</code>下<code>git init</code>，添加远程repo地址，直接<code>push</code>即可。</li>
+<li>由于5.1的主题也是一个repo，无法<code>push</code>主题<code>next</code>文件夹里的东西，但又想保存自己的配置，就在<code>theme</code>文件夹下新建了一个<code>config</code>文件夹，用<code>ln next_config.yml ../next/_config.yml</code>进行硬链接，来保存备置。</li>
+<li>在git status的时候，会看到<code>commit or discard the untracked or modified content in submodules</code>的问题，可以删掉<code>.git</code>或在相应主题的文件夹里<code>commit</code>最新的更改后，在<code>myblog</code>下<code>git submodule update</code>。</li>
+</ol>
+<h2 id="5、视觉-功能"><a href="#5、视觉-功能" class="headerlink" title="5、视觉/功能"></a>5、视觉/功能</h2><h3 id="5-1-主题设置"><a href="#5-1-主题设置" class="headerlink" title="5.1 主题设置"></a>5.1 主题设置</h3><p>Google Hexo的主题，选择自己喜欢的下载。这里，我选择了<code>hexo-theme-next</code>作为主题。方法如下：</p>
+<ol>
+<li>在myblog下下载主题。</li>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 
 <p>其中，<code>themes/next</code>的意思是把下载的文件放在myblog下themes文件夹中，并命名为next。</p>
-<p>2、 修改myblog下的配置<code>_config.yml</code>，把<code>theme: landscape</code>改为<code>theme: next</code>即可。</p>
-<p>3、 最后执行</p>
+<ol start="2">
+<li><p>修改myblog下的配置<code>_config.yml</code>，把<code>theme: landscape</code>改为<code>theme: next</code>即可。</p>
+</li>
+<li><p>最后执行</p>
+</li>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
-<p>在用git备份的时候遇到一些问题</p>
 
           
         

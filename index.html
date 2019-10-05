@@ -259,6 +259,132 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/05/new-title/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jacob Shi">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jacob's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/05/new-title/" itemprop="url">new title</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-05T12:08:09+08:00">
+                2019-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/10/05/new-title/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/04/搭建Hexo记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -351,59 +477,14 @@
 
       
         
-          
-            <h1 id="搭建Hexo记录"><a href="#搭建Hexo记录" class="headerlink" title="搭建Hexo记录"></a>搭建Hexo记录</h1><blockquote>
-<p>参考的Blogs：</p>
-<p><a href="https://zhuanlan.zhihu.com/p/34654952" target="_blank" rel="noopener">Mac+Hexo+GitHub搭建博客教程</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/35668237" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a></p>
-<p>以下所有操作均在Mac上。</p>
-</blockquote>
-<h2 id="1、搭建环境"><a href="#1、搭建环境" class="headerlink" title="1、搭建环境"></a>1、搭建环境</h2><h3 id="1-1-安装Node-js和Git"><a href="#1-1-安装Node-js和Git" class="headerlink" title="1.1 安装Node.js和Git"></a>1.1 安装Node.js和Git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br><span class="line">(google how to install git)</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-2-安装Hexo"><a href="#1-2-安装Hexo" class="headerlink" title="1.2 安装Hexo"></a>1.2 安装Hexo</h3><p>“-g” 表示全局安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
-
-<h2 id="2、博客初始化"><a href="#2、博客初始化" class="headerlink" title="2、博客初始化"></a>2、博客初始化</h2><p>新建一个目录（如myblog），然后在此目录中进行操作。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mkdir myblog</span><br><span class="line">cd myblog</span><br><span class="line">hexo init</span><br><span class="line">sudo npm install</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>执行以上操作，即可通过提示的地址（我的是<a href="http://localhost:4000），查看初始化后的本地博客。" target="_blank" rel="noopener">http://localhost:4000），查看初始化后的本地博客。</a></p>
-<h2 id="3、关联Github"><a href="#3、关联Github" class="headerlink" title="3、关联Github"></a>3、关联Github</h2><p>在Github上新建一个username.github.io的repo。username为github的用户名。</p>
-<p>然后修改myblog下的配置文件_config.yml，把deploy改为（注意空格）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:JacobShi777/JacobShi777.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>因为是在使用git的，有ssh key，所以后续操作不需要密码。（网上其它教程都是配置的https）</p>
-<p>最后执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>hexo g出错则执行<code>npm install hexo --save</code>，hexo d出错则执行<code>npm install hexo-deployer-git --save</code>。</p>
-<p>之后便可以通过访问<code>jacobshi777.github.io</code>进行访问。</p>
-<h2 id="4、备份文件"><a href="#4、备份文件" class="headerlink" title="4、备份文件"></a>4、备份文件</h2><p>我是在5.1主题设置进行备份的。具体方法是：</p>
-<ol>
-<li>先在github上新建一个的repo。（不想在<code>username.github.io</code>里备份的话）</li>
-<li>在原来的<code>myblog</code>下<code>git init</code>，添加远程repo地址，直接<code>push</code>即可。</li>
-<li>由于5.1的主题也是一个repo，无法<code>push</code>主题<code>next</code>文件夹里的东西，但又想保存自己的配置，就在<code>theme</code>文件夹下新建了一个<code>config</code>文件夹，用<code>ln next_config.yml ../next/_config.yml</code>进行硬链接，来保存备置。</li>
-<li>在git status的时候，会看到<code>commit or discard the untracked or modified content in submodules</code>的问题，可以删掉<code>.git</code>或在相应主题的文件夹里<code>commit</code>最新的更改后，在<code>myblog</code>下<code>git submodule update</code>。</li>
-</ol>
-<h2 id="5、视觉-功能"><a href="#5、视觉-功能" class="headerlink" title="5、视觉/功能"></a>5、视觉/功能</h2><h3 id="5-1-主题设置"><a href="#5-1-主题设置" class="headerlink" title="5.1 主题设置"></a>5.1 主题设置</h3><p>Google Hexo的主题，选择自己喜欢的下载。这里，我选择了<code>hexo-theme-next</code>作为主题。方法如下：</p>
-<ol>
-<li>在myblog下下载主题。</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-
-<p>其中，<code>themes/next</code>的意思是把下载的文件放在myblog下themes文件夹中，并命名为next。</p>
-<ol start="2">
-<li><p>修改myblog下的配置<code>_config.yml</code>，把<code>theme: landscape</code>改为<code>theme: next</code>即可。</p>
-</li>
-<li><p>最后执行</p>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-2-文章头设置"><a href="#5-2-文章头设置" class="headerlink" title="5.2 文章头设置"></a>5.2 文章头设置</h3><p>修改<code>scaffolds/post.md</code>文件，之后通过<code>hexo new post &quot;article name&quot;</code>命令即可自动生成。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">top: false</span><br><span class="line">cover: false</span><br><span class="line">password:</span><br><span class="line">toc: true</span><br><span class="line">mathjax: true</span><br><span class="line">summary:</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br></pre></td></tr></table></figure>
-
-
-          
+          记录我搭建Github Page的过程
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/10/04/搭建Hexo记录/">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -543,8 +624,15 @@
       
         
           
-            
           
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/10/04/Second-Article/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -684,9 +772,16 @@
       
         
           
-            <p>This is my first article.</p>
+          This is my first article.
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/10/04/First-Article/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -826,21 +921,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/10/04/hello-world/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -920,7 +1009,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

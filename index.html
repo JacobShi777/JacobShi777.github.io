@@ -187,6 +187,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
@@ -345,6 +355,7 @@
             <h1 id="搭建Hexo记录"><a href="#搭建Hexo记录" class="headerlink" title="搭建Hexo记录"></a>搭建Hexo记录</h1><blockquote>
 <p>参考的Blogs：</p>
 <p><a href="https://zhuanlan.zhihu.com/p/34654952" target="_blank" rel="noopener">Mac+Hexo+GitHub搭建博客教程</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/35668237" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a></p>
 <p>以下所有操作均在Mac上。</p>
 </blockquote>
 <h2 id="1、搭建环境"><a href="#1、搭建环境" class="headerlink" title="1、搭建环境"></a>1、搭建环境</h2><h3 id="1-1-安装Node-js和Git"><a href="#1-1-安装Node-js和Git" class="headerlink" title="1.1 安装Node.js和Git"></a>1.1 安装Node.js和Git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br><span class="line">(google how to install git)</span><br></pre></td></tr></table></figure>
@@ -387,6 +398,9 @@
 </li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-文章头设置"><a href="#5-2-文章头设置" class="headerlink" title="5.2 文章头设置"></a>5.2 文章头设置</h3><p>修改<code>scaffolds/post.md</code>文件，之后通过<code>hexo new post &quot;article name&quot;</code>命令即可自动生成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">top: false</span><br><span class="line">cover: false</span><br><span class="line">password:</span><br><span class="line">toc: true</span><br><span class="line">mathjax: true</span><br><span class="line">summary:</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br></pre></td></tr></table></figure>
 
 
           

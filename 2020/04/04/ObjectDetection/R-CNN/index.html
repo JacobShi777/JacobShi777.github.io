@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jacob&#39;s Blog">
 <meta property="og:description" content="Rich feature hierarchies for accurate object detection and semantic segmentation Tech report (v5)  Contents Architecture Training Results Appendix">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-04-04T11:57:56.467Z">
+<meta property="og:updated_time" content="2020-04-04T13:00:49.154Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="R-CNN">
 <meta name="twitter:description" content="Rich feature hierarchies for accurate object detection and semantic segmentation Tech report (v5)  Contents Architecture Training Results Appendix">
@@ -394,7 +394,7 @@
 </blockquote>
 <p>Bounding-box的动机是因为selective search的region proposal不一定能找到合适的边界框；因此对于一个识别为相应label的window，我们希望通过回归的方式，找到更加精确的边界框。</p>
 <h4 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h4><p>在目标检测中，我们通常会用四维向量(x, y, w, h)来表示一个window，分别表示其中心点坐标和宽高。对于一个region proposal的window，我们自然知道其四维向量坐标，因此我们希望学习一种变换，使变换后的(x, y, w, h)更加接近真实的ground truth的值。</p>
-<p>所以在训练过程中，我们希望学习一种映射关系，使得给定的$P$为$(P_x,P_y, P_w, P_h)$的情况下，经过映射$f$得到$G’$，即有：$f(P_x, P_y, P_w, P_h)=(P’_x, P’_y, P’_w, P’_h)$，且$(P’_x, P’_y, P’_w, P’_h)\approx(G_x, G_y, G_w, G_h)$。</p>
+<p>所以在训练过程中，我们希望学习一种映射关系，使得给定的$P$为$(P_x, P_y, P_w, P_h)$的情况下，经过映射$f$得到$G’$，即有：$f(P_x, P_y, P_w, P_h)=(P’_x, P’_y, P’_w, P’_h)$，且$(P’_x, P’_y, P’_w, P’_h)\approx(G_x, G_y, G_w, G_h)$。</p>
 <h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>接着我们需要来看如何实现映射$f$。实现方法就是简单的平移+缩放。</p>
 <ol>
 <li>平移（$\Delta x, \Delta y$），在R-CNN中对应如下的平移操作：</li>

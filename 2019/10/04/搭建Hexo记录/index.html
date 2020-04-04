@@ -353,35 +353,29 @@
       
         <p>搭建个人Github Pages</p>
 <a id="more"></a>
-
 <blockquote>
 <p>参考的Blogs：</p>
 <p><a href="https://zhuanlan.zhihu.com/p/34654952" target="_blank" rel="noopener">Mac+Hexo+GitHub搭建博客教程</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/35668237" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a></p>
 <p><a href="http://eternalzttz.com/hexo-next.html" target="_blank" rel="noopener">hexo next主题优化，打造个人精致网站</a></p>
-<p><a href="http://tsim.xyz/2018/05/21/second-post-for-hexo/" target="_blank" rel="noopener">从零开始搭建Github Page – 源码备份&amp;双语网站</a></p>
+<p><a href="http://tsim.xyz/2018/05/21/second-post-for-hexo/" target="_blank" rel="noopener">从零开始搭建Github Page — 源码备份&amp;双语网站</a></p>
 <p><a href="https://me.idealli.com/post/e8d13fc.html" target="_blank" rel="noopener">这应该是最全的hexo博客搭建以及next美化教程</a></p>
 <p><a href="https://blog.csdn.net/maosidiaoxian/article/details/85220394" target="_blank" rel="noopener">如何在Hexo中对文章md文件分类</a></p>
 <p><a href="https://io-oi.me/tech/hexo-next-optimization/" target="_blank" rel="noopener">打造个性超赞博客 Hexo + NexT + GitHub Pages 的超深度优化</a></p>
 <p>以下所有操作均在Mac上。</p>
 </blockquote>
 <h2 id="1、搭建环境"><a href="#1、搭建环境" class="headerlink" title="1、搭建环境"></a>1、搭建环境</h2><h3 id="1-1-安装Node-js和Git"><a href="#1-1-安装Node-js和Git" class="headerlink" title="1.1 安装Node.js和Git"></a>1.1 安装Node.js和Git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br><span class="line">(google how to install git)</span><br></pre></td></tr></table></figure>
-
 <h3 id="1-2-安装Hexo"><a href="#1-2-安装Hexo" class="headerlink" title="1.2 安装Hexo"></a>1.2 安装Hexo</h3><p>“-g” 表示全局安装</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
-
 <h2 id="2、博客初始化"><a href="#2、博客初始化" class="headerlink" title="2、博客初始化"></a>2、博客初始化</h2><p>新建一个目录（如myblog），然后在此目录中进行操作。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mkdir myblog</span><br><span class="line">cd myblog</span><br><span class="line">hexo init</span><br><span class="line">sudo npm install</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
 <p>执行以上操作，即可通过提示的地址（我的是<a href="http://localhost:4000），查看初始化后的本地博客。" target="_blank" rel="noopener">http://localhost:4000），查看初始化后的本地博客。</a></p>
 <h2 id="3、关联Github"><a href="#3、关联Github" class="headerlink" title="3、关联Github"></a>3、关联Github</h2><p>在Github上新建一个username.github.io的repo。username为github的用户名。</p>
 <p>然后修改myblog下的配置文件_config.yml，把deploy改为（注意空格）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:JacobShi777/JacobShi777.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
 <p>因为是在使用git的，有ssh key，所以后续操作不需要密码。（网上其它教程都是配置的https）</p>
 <p>最后执行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
 <p>hexo g出错则执行<code>npm install hexo --save</code>，hexo d出错则执行<code>npm install hexo-deployer-git --save</code>。</p>
 <p>之后便可以通过访问<code>jacobshi777.github.io</code>进行访问。</p>
 <h2 id="4、备份文件"><a href="#4、备份文件" class="headerlink" title="4、备份文件"></a>4、备份文件</h2><p>我是在5.1主题设置进行备份的。具体方法是：</p>
@@ -396,24 +390,20 @@
 <li>在myblog下下载主题。</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-
 <p>其中，<code>themes/next</code>的意思是把下载的文件放在myblog下themes文件夹中，并命名为next。</p>
-<ol start="2">
+<ol>
 <li><p>修改myblog下的配置<code>_config.yml</code>，把<code>theme: landscape</code>改为<code>theme: next</code>即可。</p>
 </li>
 <li><p>最后执行</p>
 </li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-2-标签和分类"><a href="#5-2-标签和分类" class="headerlink" title="5.2 标签和分类"></a>5.2 标签和分类</h3><p>参考<a href="[https://linlif.github.io/2017/05/27/Hexo%E4%BD%BF%E7%94%A8%E6%94%BB%E7%95%A5-%E6%B7%BB%E5%8A%A0%E5%88%86%E7%B1%BB%E5%8F%8A%E6%A0%87%E7%AD%BE/](https://linlif.github.io/2017/05/27/Hexo使用攻略-添加分类及标签/)">Hexo使用攻略-添加分类及标签</a>。</p>
+<h3 id="5-2-标签和分类"><a href="#5-2-标签和分类" class="headerlink" title="5.2 标签和分类"></a>5.2 标签和分类</h3><p>参考<a href="[https://linlif.github.io/2017/05/27/Hexo%E4%BD%BF%E7%94%A8%E6%94%BB%E7%95%A5-%E6%B7%BB%E5%8A%A0%E5%88%86%E7%B1%BB%E5%8F%8A%E6%A0%87%E7%AD%BE/](https://linlif.github.io/2017/05/27/Hexo使用攻略-添加分类及标签/">Hexo使用攻略-添加分类及标签</a>)。</p>
 <h3 id="5-3-文章头设置"><a href="#5-3-文章头设置" class="headerlink" title="5.3 文章头设置"></a>5.3 文章头设置</h3><p>修改<code>scaffolds/post.md</code>文件，之后通过<code>hexo new post &quot;article name&quot;</code>命令即可自动生成。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">top: false</span><br><span class="line">cover: false</span><br><span class="line">password:</span><br><span class="line">toc: true</span><br><span class="line">mathjax: true</span><br><span class="line">summary:</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
 <h3 id="5-4-主页展示部分文章"><a href="#5-4-主页展示部分文章" class="headerlink" title="5.4 主页展示部分文章"></a>5.4 主页展示部分文章</h3><p>直接在文章中加入<code>&lt;!--more--&gt;</code>，在此之前的的内容都会在主页展示出来，并有<code>Read more &gt;&gt;</code>按钮。</p>
 <h3 id="5-5-去除toc的序号"><a href="#5-5-去除toc的序号" class="headerlink" title="5.5 去除toc的序号"></a>5.5 去除toc的序号</h3><p>修改主题配置文件，把number改为false。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">  # Automatically add list number to toc.</span><br><span class="line">  number: false</span><br></pre></td></tr></table></figure>
-
 
       
     </div>

@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jacob&#39;s Blog">
 <meta property="og:description" content="Rich feature hierarchies for accurate object detection and semantic segmentation Tech report (v5)  Contents Architecture Training Results Appendix">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-04-04T13:00:49.154Z">
+<meta property="og:updated_time" content="2020-04-04T13:19:59.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="R-CNN">
 <meta name="twitter:description" content="Rich feature hierarchies for accurate object detection and semantic segmentation Tech report (v5)  Contents Architecture Training Results Appendix">
@@ -362,14 +362,14 @@
 <li>Appendix</li>
 </ul>
 <a id="more"></a>
-<h2 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h2><p>R-CNN主要由三个模块组成:</p>
-<h3 id="1-region-proposals"><a href="#1-region-proposals" class="headerlink" title="1. region proposals"></a>1. region proposals</h3><p>第一个模块生成类别无关的region proposals，用selective search方法来获得；region proposals用来给后面的detector使用。</p>
-<h3 id="2-Feature-extraction"><a href="#2-Feature-extraction" class="headerlink" title="2. Feature extraction"></a>2. Feature extraction</h3><p>第二个模块是一个卷积网络，用来提取每个region proposal的固定长度的特征向量。</p>
+<h2 id="1-Architecture"><a href="#1-Architecture" class="headerlink" title="1. Architecture"></a>1. Architecture</h2><p>R-CNN主要由三个模块组成:</p>
+<h3 id="1-1-region-proposals"><a href="#1-1-region-proposals" class="headerlink" title="1.1 region proposals"></a>1.1 region proposals</h3><p>第一个模块生成类别无关的region proposals，用selective search方法来获得；region proposals用来给后面的detector使用。</p>
+<h3 id="1-2-Feature-extraction"><a href="#1-2-Feature-extraction" class="headerlink" title="1.2 Feature extraction"></a>1.2 Feature extraction</h3><p>第二个模块是一个卷积网络，用来提取每个region proposal的固定长度的特征向量。</p>
 <p>这里我们提取的是4096维度的特征向量，就是region proposal通过AlexNet的5个卷积层和2个全连接层后获取的feature。</p>
-<h3 id="3-class-specific-linear-SVMs"><a href="#3-class-specific-linear-SVMs" class="headerlink" title="3. class-specific linear SVMs"></a>3. class-specific linear SVMs</h3><p>第三个模块是class-specific linear SVMs。</p>
-<h2 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h2><h3 id="1-Supervised-pre-training"><a href="#1-Supervised-pre-training" class="headerlink" title="1. Supervised pre-training"></a>1. Supervised pre-training</h3><p>首先在ILSVRC2012 classification任务上训练模型；使用的模型是AlexNet。</p>
+<h3 id="1-3-class-specific-linear-SVMs"><a href="#1-3-class-specific-linear-SVMs" class="headerlink" title="1.3 class-specific linear SVMs"></a>1.3 class-specific linear SVMs</h3><p>第三个模块是class-specific linear SVMs。</p>
+<h2 id="2-Training"><a href="#2-Training" class="headerlink" title="2. Training"></a>2. Training</h2><h3 id="2-1-Supervised-pre-training"><a href="#2-1-Supervised-pre-training" class="headerlink" title="2.1 Supervised pre-training"></a>2.1 Supervised pre-training</h3><p>首先在ILSVRC2012 classification任务上训练模型；使用的模型是AlexNet。</p>
 <p>作者说这里没有bounding box的labels；应该就是说做最常规的分类任务</p>
-<h3 id="2-Domain-specific-fine-tuning"><a href="#2-Domain-specific-fine-tuning" class="headerlink" title="2. Domain-specific fine-tuning"></a>2. Domain-specific fine-tuning</h3><ol>
+<h3 id="2-2-Domain-specific-fine-tuning"><a href="#2-2-Domain-specific-fine-tuning" class="headerlink" title="2.2 Domain-specific fine-tuning"></a>2.2 Domain-specific fine-tuning</h3><ol>
 <li>为了更好地使模型适应我们的任务，作者又进行了fine-tuning，使其更好的适应我们 的新domain(warped proposal window)</li>
 <li>把AlexNet模型的最后一个全连接层（原本1000的分类），替换成21分类的全连接层（此任务中的20个类别加上一个background类别）</li>
 <li>fine-tuning时，region proposal与其对应类别的ground-truth box的$IoU\geq0.5$的，算为相应类别的样本；其余的都算作background类别</li>
@@ -377,15 +377,15 @@
 <li>每次迭代选取32个positive windows（over all classes）和96个background windows，组成一个mini-batch</li>
 <li>使用SGD</li>
 </ol>
-<h3 id="3-Object-category-classifiers"><a href="#3-Object-category-classifiers" class="headerlink" title="3. Object category classifiers"></a>3. Object category classifiers</h3><p>这里使用SVMs进行分类训练，对第个类别训练一个linear SVM分类器。</p>
+<h3 id="2-3-Object-category-classifiers"><a href="#2-3-Object-category-classifiers" class="headerlink" title="2.3 Object category classifiers"></a>2.3 Object category classifiers</h3><p>这里使用SVMs进行分类训练，对第个类别训练一个linear SVM分类器。</p>
 <p>在选取负样本的问题上，作者进行了实验，就是IoU多少以下算为负样本更为合适，最终作者的实验指出$IoU\leq0.3$的windows作为负样本是效果最好的（当然没有相应当前分类器类别的也都是负样本）；至于正样本，是严格的ground-truth bounding box。</p>
 <p>注：除了上述符合正负标准的样本之外，其余的全部舍弃。</p>
-<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><ul>
+<h2 id="3-Results"><a href="#3-Results" class="headerlink" title="3. Results"></a>3. Results</h2><ul>
 <li>VOC 2010：mAP值在使用了Bounding-box Regression的情况下是53.7%，不使用时是50.2%；</li>
 <li>VOC 2011/2012 test上的结果是53.3%；</li>
 <li>VOC 2013: 200-class的任务上，mAP为31.4%。</li>
 </ul>
-<h2 id="Appendix"><a href="#Appendix" class="headerlink" title="Appendix"></a>Appendix</h2><h3 id="Bounding-box-Regression"><a href="#Bounding-box-Regression" class="headerlink" title="Bounding-box Regression"></a>Bounding-box Regression</h3><blockquote>
+<h2 id="4-Appendix"><a href="#4-Appendix" class="headerlink" title="4. Appendix"></a>4. Appendix</h2><h3 id="4-1-Bounding-box-Regression"><a href="#4-1-Bounding-box-Regression" class="headerlink" title="4.1 Bounding-box Regression"></a>4.1 Bounding-box Regression</h3><blockquote>
 <p>这里主要参考：</p>
 <ul>
 <li><a href="https://zhuanlan.zhihu.com/p/60794316" target="_blank" rel="noopener">基础知识：IoU、NMS、Bounding box regression</a>，此文整个流程比较阐述比较清晰</li>
@@ -594,7 +594,7 @@ loss = \sum^N_{i=1}(t^i_* - w^T_* \phi_5(P))^2 + \lambda||w_*||^2</script><p>其
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Contents"><span class="nav-text">Contents</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Architecture"><span class="nav-text">Architecture</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-region-proposals"><span class="nav-text">1. region proposals</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Feature-extraction"><span class="nav-text">2. Feature extraction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-class-specific-linear-SVMs"><span class="nav-text">3. class-specific linear SVMs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Training"><span class="nav-text">Training</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Supervised-pre-training"><span class="nav-text">1. Supervised pre-training</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Domain-specific-fine-tuning"><span class="nav-text">2. Domain-specific fine-tuning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Object-category-classifiers"><span class="nav-text">3. Object category classifiers</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Results"><span class="nav-text">Results</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Appendix"><span class="nav-text">Appendix</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Bounding-box-Regression"><span class="nav-text">Bounding-box Regression</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题定义"><span class="nav-text">问题定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方法"><span class="nav-text">解决方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设计回归"><span class="nav-text">设计回归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试"><span class="nav-text">测试</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Contents"><span class="nav-text">Contents</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Architecture"><span class="nav-text">1. Architecture</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-region-proposals"><span class="nav-text">1.1 region proposals</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-Feature-extraction"><span class="nav-text">1.2 Feature extraction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-class-specific-linear-SVMs"><span class="nav-text">1.3 class-specific linear SVMs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Training"><span class="nav-text">2. Training</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-Supervised-pre-training"><span class="nav-text">2.1 Supervised pre-training</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Domain-specific-fine-tuning"><span class="nav-text">2.2 Domain-specific fine-tuning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-Object-category-classifiers"><span class="nav-text">2.3 Object category classifiers</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Results"><span class="nav-text">3. Results</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Appendix"><span class="nav-text">4. Appendix</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-Bounding-box-Regression"><span class="nav-text">4.1 Bounding-box Regression</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题定义"><span class="nav-text">问题定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方法"><span class="nav-text">解决方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设计回归"><span class="nav-text">设计回归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试"><span class="nav-text">测试</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

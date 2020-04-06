@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="搭建个人Github Pages">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建Hexo记录">
+<meta property="og:url" content="http://yoursite.com/2019/10/04/Else/搭建Hexo记录/index.html">
+<meta property="og:site_name" content="Jacob&#39;s Blog">
+<meta property="og:description" content="搭建个人Github Pages">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-04-06T06:53:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="搭建Hexo记录">
+<meta name="twitter:description" content="搭建个人Github Pages">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/10/04/Else/搭建Hexo记录/">
+
+
+
+
+
+  <title>搭建Hexo记录 | Jacob's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jacob's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/04/Else/搭建Hexo记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jacob Shi">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jacob's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">搭建Hexo记录</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-04T22:48:38+08:00">
+                2019-10-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Else/" itemprop="url" rel="index">
+                    <span itemprop="name">Else</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>搭建个人Github Pages</p>
+<a id="more"></a>
+<blockquote>
+<p>参考的Blogs：</p>
+<p><a href="https://zhuanlan.zhihu.com/p/34654952" target="_blank" rel="noopener">Mac+Hexo+GitHub搭建博客教程</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/35668237" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a></p>
+<p><a href="http://eternalzttz.com/hexo-next.html" target="_blank" rel="noopener">hexo next主题优化，打造个人精致网站</a></p>
+<p><a href="http://tsim.xyz/2018/05/21/second-post-for-hexo/" target="_blank" rel="noopener">从零开始搭建Github Page — 源码备份&amp;双语网站</a></p>
+<p><a href="https://me.idealli.com/post/e8d13fc.html" target="_blank" rel="noopener">这应该是最全的hexo博客搭建以及next美化教程</a></p>
+<p><a href="https://blog.csdn.net/maosidiaoxian/article/details/85220394" target="_blank" rel="noopener">如何在Hexo中对文章md文件分类</a></p>
+<p><a href="https://io-oi.me/tech/hexo-next-optimization/" target="_blank" rel="noopener">打造个性超赞博客 Hexo + NexT + GitHub Pages 的超深度优化</a></p>
+<p>以下所有操作均在Mac上。</p>
+</blockquote>
+<h2 id="1-搭建环境"><a href="#1-搭建环境" class="headerlink" title="1. 搭建环境"></a>1. 搭建环境</h2><h3 id="1-1-安装Node-js和Git"><a href="#1-1-安装Node-js和Git" class="headerlink" title="1.1 安装Node.js和Git"></a>1.1 安装Node.js和Git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br><span class="line">(google how to install git)</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-安装Hexo"><a href="#1-2-安装Hexo" class="headerlink" title="1.2 安装Hexo"></a>1.2 安装Hexo</h3><p>“-g” 表示全局安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
+<h2 id="2-博客初始化"><a href="#2-博客初始化" class="headerlink" title="2. 博客初始化"></a>2. 博客初始化</h2><p>新建一个目录（如myblog），然后在此目录中进行操作。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mkdir myblog</span><br><span class="line">cd myblog</span><br><span class="line">hexo init</span><br><span class="line">sudo npm install</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>执行以上操作，即可通过提示的地址（我的是<a href="http://localhost:4000），查看初始化后的本地博客。" target="_blank" rel="noopener">http://localhost:4000），查看初始化后的本地博客。</a></p>
+<h2 id="3-关联Github"><a href="#3-关联Github" class="headerlink" title="3. 关联Github"></a>3. 关联Github</h2><p>在Github上新建一个username.github.io的repo。username为github的用户名。</p>
+<p>然后修改myblog下的配置文件_config.yml，把deploy改为（注意空格）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:JacobShi777/JacobShi777.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>因为是在使用git的，有ssh key，所以后续操作不需要密码。（网上其它教程都是配置的https）</p>
+<p>最后执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>hexo g出错则执行<code>npm install hexo --save</code>，hexo d出错则执行<code>npm install hexo-deployer-git --save</code>。</p>
+<p>之后便可以通过访问<code>jacobshi777.github.io</code>进行访问。</p>
+<h2 id="4-备份文件"><a href="#4-备份文件" class="headerlink" title="4. 备份文件"></a>4. 备份文件</h2><p>我是在5.1主题设置进行备份的。具体方法是：</p>
+<ol>
+<li>先在github上新建一个的repo。（不想在<code>username.github.io</code>里备份的话）</li>
+<li>在原来的<code>myblog</code>下<code>git init</code>，添加远程repo地址，直接<code>push</code>即可。</li>
+<li>由于5.1的主题也是一个repo，无法<code>push</code>主题<code>next</code>文件夹里的东西，但又想保存自己的配置，就在<code>theme</code>文件夹下新建了一个<code>config</code>文件夹，用<code>ln next_config.yml ../next/_config.yml</code>进行硬链接，来保存备置。</li>
+<li>在git status的时候，会看到<code>commit or discard the untracked or modified content in submodules</code>的问题，可以删掉<code>.git</code>或在相应主题的文件夹里<code>commit</code>最新的更改后，在<code>myblog</code>下<code>git submodule update</code>。</li>
+</ol>
+<h2 id="5-视觉-功能"><a href="#5-视觉-功能" class="headerlink" title="5. 视觉/功能"></a>5. 视觉/功能</h2><h3 id="5-1-主题设置"><a href="#5-1-主题设置" class="headerlink" title="5.1 主题设置"></a>5.1 主题设置</h3><p>Google Hexo的主题，选择自己喜欢的下载。这里，我选择了<code>hexo-theme-next</code>作为主题。方法如下：</p>
+<ol>
+<li>在myblog下下载主题。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<p>其中，<code>themes/next</code>的意思是把下载的文件放在myblog下themes文件夹中，并命名为next。</p>
+<ol>
+<li><p>修改myblog下的配置<code>_config.yml</code>，把<code>theme: landscape</code>改为<code>theme: next</code>即可。</p>
+</li>
+<li><p>最后执行</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="5-2-标签和分类"><a href="#5-2-标签和分类" class="headerlink" title="5.2 标签和分类"></a>5.2 标签和分类</h3><p>参考<a href="[https://linlif.github.io/2017/05/27/Hexo%E4%BD%BF%E7%94%A8%E6%94%BB%E7%95%A5-%E6%B7%BB%E5%8A%A0%E5%88%86%E7%B1%BB%E5%8F%8A%E6%A0%87%E7%AD%BE/](https://linlif.github.io/2017/05/27/Hexo使用攻略-添加分类及标签/">Hexo使用攻略-添加分类及标签</a>)。</p>
+<h3 id="5-3-文章头设置"><a href="#5-3-文章头设置" class="headerlink" title="5.3 文章头设置"></a>5.3 文章头设置</h3><p>修改<code>scaffolds/post.md</code>文件，之后通过<code>hexo new post &quot;article name&quot;</code>命令即可自动生成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">top: false</span><br><span class="line">cover: false</span><br><span class="line">password:</span><br><span class="line">toc: true</span><br><span class="line">mathjax: true</span><br><span class="line">summary:</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h3 id="5-4-主页展示部分文章"><a href="#5-4-主页展示部分文章" class="headerlink" title="5.4 主页展示部分文章"></a>5.4 主页展示部分文章</h3><p>直接在文章中加入<code>&lt;!--more--&gt;</code>，在此之前的的内容都会在主页展示出来，并有<code>Read more &gt;&gt;</code>按钮。</p>
+<h3 id="5-5-去除toc的序号"><a href="#5-5-去除toc的序号" class="headerlink" title="5.5 去除toc的序号"></a>5.5 去除toc的序号</h3><p>修改主题配置文件，把number改为false。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">  # Automatically add list number to toc.</span><br><span class="line">  number: false</span><br></pre></td></tr></table></figure>
+<h2 id="6-一些问题"><a href="#6-一些问题" class="headerlink" title="6. 一些问题"></a>6. 一些问题</h2><h3 id="6-1-公式渲染"><a href="#6-1-公式渲染" class="headerlink" title="6.1 公式渲染"></a>6.1 公式渲染</h3><p>我就只是挑了google前几个答案，也没细看，乱改了一通，就好了，在此作个记录。</p>
+<p>首先根据<a href="[https://whitepuffer.github.io/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/hexo%E5%8D%9A%E5%AE%A2markdown%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html](https://whitepuffer.github.io/环境搭建/hexo博客markdown数学公式渲染错误解决方法.html">hexo博客markdown数学公式渲染错误解决方法</a>)这篇文章，改了如下改动：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+<p>然后根据<a href="https://abelsu7.top/2018/10/29/hexo-mathjax/" target="_blank" rel="noopener">在 Hexo 中使用 MathJax 渲染数学公式</a>这篇文章，先修改了<code>node_modules/kramed/lib/rules/inline.js</code>文件中的几行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/, 第 11 行, 将其修改为</span><br><span class="line">escape: /^\\([`*\[\]()#$+\-.!_&gt;])/,</span><br><span class="line">// em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/, 第 20 行，将其修改为 </span><br><span class="line">em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br></pre></td></tr></table></figure>
+<p>再在<code>theme/next/_config.yml</code>中，把<code>mathjax</code>修改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mathjax:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+<p>然后就好了。</p>
+<p>另：我又试着把<code>inline.js</code>的两行改了回去，也没报错。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/04/Else/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/05/Languages/古希腊语00-前言和目录/" rel="prev" title="古希腊语00-前言和目录">
+                古希腊语00-前言和目录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jacob Shi</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-搭建环境"><span class="nav-text">1. 搭建环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-安装Node-js和Git"><span class="nav-text">1.1 安装Node.js和Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-安装Hexo"><span class="nav-text">1.2 安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-博客初始化"><span class="nav-text">2. 博客初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-关联Github"><span class="nav-text">3. 关联Github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-备份文件"><span class="nav-text">4. 备份文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-视觉-功能"><span class="nav-text">5. 视觉/功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-主题设置"><span class="nav-text">5.1 主题设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-标签和分类"><span class="nav-text">5.2 标签和分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-文章头设置"><span class="nav-text">5.3 文章头设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-主页展示部分文章"><span class="nav-text">5.4 主页展示部分文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-去除toc的序号"><span class="nav-text">5.5 去除toc的序号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-一些问题"><span class="nav-text">6. 一些问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-公式渲染"><span class="nav-text">6.1 公式渲染</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jacob Shi</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

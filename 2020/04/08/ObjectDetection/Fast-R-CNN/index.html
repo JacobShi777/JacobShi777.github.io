@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Research,Deep Learning,Computer Vision,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="description" content="Fast R-CNN By Ross Girshick">
+<meta name="keywords" content="Research,Deep Learning,Computer Vision">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/10/04/Else/hello-world/index.html">
+<meta property="og:title" content="Fast R-CNN">
+<meta property="og:url" content="http://yoursite.com/2020/04/08/ObjectDetection/Fast-R-CNN/index.html">
 <meta property="og:site_name" content="Jacob&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta property="og:description" content="Fast R-CNN By Ross Girshick">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-05T10:22:58.401Z">
+<meta property="og:updated_time" content="2020-04-09T14:21:37.057Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="twitter:title" content="Fast R-CNN">
+<meta name="twitter:description" content="Fast R-CNN By Ross Girshick">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/10/04/Else/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2020/04/08/ObjectDetection/Fast-R-CNN/">
 
 
 
 
 
-  <title>Hello World | Jacob's Blog</title>
+  <title>Fast R-CNN | Jacob's Blog</title>
   
 
 
@@ -262,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/04/Else/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/08/ObjectDetection/Fast-R-CNN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jacob Shi">
@@ -279,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Fast R-CNN</h1>
         
 
         <div class="post-meta">
@@ -291,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-04T10:36:01+08:00">
-                2019-10-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-08T21:52:35+08:00">
+                2020-04-08
               </time>
             
 
@@ -301,6 +302,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Object-Detection/" itemprop="url" rel="index">
+                    <span itemprop="name">Object Detection</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -329,16 +352,38 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+        <blockquote>
+<p><a href="https://arxiv.org/abs/1504.08083" target="_blank" rel="noopener"><strong>Fast R-CNN</strong></a></p>
+<p><em>By Ross Girshick</em></p>
+</blockquote>
 <a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="1-Contributions"><a href="#1-Contributions" class="headerlink" title="1. Contributions"></a>1. Contributions</h2><h3 id="1-1-Motivation"><a href="#1-1-Motivation" class="headerlink" title="1.1 Motivation"></a>1.1 Motivation</h3><h4 id="Drawbacks-of-R-CNN"><a href="#Drawbacks-of-R-CNN" class="headerlink" title="Drawbacks of R-CNN"></a>Drawbacks of R-CNN</h4><ol>
+<li>训练是多步骤进行的。R-CNN首先需要finetune网络，接着需要用到SVM，最后还要进行bounding-box regression；这样多步骤的比较麻烦。</li>
+<li>训练的空间和时间开销比较大。</li>
+<li>目标检测速度慢。一般一张图片的检测需要47秒，而且还是用GPU。</li>
+</ol>
+<h4 id="Drawbacks-of-SPP-net"><a href="#Drawbacks-of-SPP-net" class="headerlink" title="Drawbacks of SPP-net"></a>Drawbacks of SPP-net</h4><ol>
+<li>训练过程同样是多步骤的。这点跟R-CNN一样。</li>
+<li>训练时也要把提取的特征写到硬盘上，空间开销大。</li>
+<li>无法对卷积层进行finetuning，因此也在一定程度上进行了accuracy。</li>
+</ol>
+<h4 id="General"><a href="#General" class="headerlink" title="General"></a>General</h4><p>总的来说，存在的比较突出的问题，一个就是multi-stage pipeline的训练比较繁琐；其次需要考虑到大量的proposals；然后，由于proposals的框选一般比较粗略，因此仍需要做bounding-box regression。所以我们提出的方案需要兼顾speed, accuracy, or simplicity。</p>
+<h3 id="1-2-Contributions"><a href="#1-2-Contributions" class="headerlink" title="1.2 Contributions"></a>1.2 Contributions</h3><p>因此，作者提出了Fast R-CNN，其主要贡献在于：</p>
+<ol>
+<li>训练是使用multi-task loss，所以single-stage的；</li>
+<li>训练过程中的特征不需要额外的存储空间；</li>
+<li>训练过程可以更新整个网络；</li>
+<li>比R-CNN和SPP-net都有更好的检测效果。</li>
+</ol>
+<h2 id="2-Architecture"><a href="#2-Architecture" class="headerlink" title="2. Architecture"></a>2. Architecture</h2><h3 id="2-1-The-RoI-pooling-layer"><a href="#2-1-The-RoI-pooling-layer" class="headerlink" title="2.1 The RoI pooling layer"></a>2.1 The RoI pooling layer</h3><p>这个是根据SPP-net的改动。在SPP-net中，其作者是用了3个不同尺度的pooling层，来获得固定尺寸的feature map。而Fast R-CNN中，作者只使用了一个该原理的pooling层；其具体实现原理，包括如果确定pooling窗口和步长的大小，以及如何从image的proposals获取相应位置在$conv_5$中的feature map，应该都是与SPP-net中的一样的。</p>
+<h3 id="2-2-Model"><a href="#2-2-Model" class="headerlink" title="2.2 Model"></a>2.2 Model</h3><p>关于网络模型，作者使用了VGG16。使用方法其实与之前两个方法是一样的，就是把最后一个卷积层后的普通pooling层换成RoI pooling layer，把最后一个全连接层换成sibling output layers，其中一个分支输出预测的分类结果，另一个分支输出对于每个类别的regression值。</p>
+<h3 id="2-3-Loss-Function"><a href="#2-3-Loss-Function" class="headerlink" title="2.3 Loss Function"></a>2.3 Loss Function</h3><p>该模型把最后的FC层替换为了两个sibling layers。</p>
+<p>第一个分支对每个RoI，输出一个关于$K+1$个类别的离散概率分布$p=(p_0, …,p_K)$，其中，额外一个类别是background类。当然，$p$是输出层的softmax计算得到的。</p>
+<p>第二个分支也是对每个RoI，对$K$类的每个类别，输出bounding-box regression offsets，$t^k = (t_x^k, t_h^k, t_w^k, t_h^k)$。注：所以我觉得这里应该是输出$4K$个值。</p>
+<p>总的来说，第一个分支就是做分类；第二个分支对相应类别做回归。具体参看论文。</p>
+<h2 id="3-Training-Test"><a href="#3-Training-Test" class="headerlink" title="3. Training/Test"></a>3. Training/Test</h2><h3 id="3-1-Mini-batch-sampling"><a href="#3-1-Mini-batch-sampling" class="headerlink" title="3.1 Mini-batch sampling"></a>3.1 Mini-batch sampling</h3><p>作者在训练的时候，每次取2张图片，每张取64个RoIs；其中每张取16个正样本，48个负样本。IoU大于0.5的为正样本，0.1至0.5之间的为负样本。</p>
+<h3 id="3-2-Truncated-SVD"><a href="#3-2-Truncated-SVD" class="headerlink" title="3.2 Truncated SVD"></a>3.2 Truncated SVD</h3><p>这里没细看。</p>
+<h2 id="4-Discussion"><a href="#4-Discussion" class="headerlink" title="4. Discussion"></a>4. Discussion</h2><p>这篇文章其实作者还讨论了很多的点，但都没细看。之后有需要再看。</p>
 
       
     </div>
@@ -354,6 +399,16 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Research/" rel="tag"># Research</a>
+          
+            <a href="/tags/Deep-Learning/" rel="tag"># Deep Learning</a>
+          
+            <a href="/tags/Computer-Vision/" rel="tag"># Computer Vision</a>
+          
+        </div>
+      
 
       
       
@@ -363,15 +418,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2020/04/06/ObjectDetection/SPP-net/" rel="next" title="SPP-net">
+                <i class="fa fa-chevron-left"></i> SPP-net
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/10/04/Else/搭建Hexo记录/" rel="prev" title="搭建Hexo记录">
-                搭建Hexo记录 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -503,7 +558,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Contributions"><span class="nav-text">1. Contributions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-Motivation"><span class="nav-text">1.1 Motivation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Drawbacks-of-R-CNN"><span class="nav-text">Drawbacks of R-CNN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Drawbacks-of-SPP-net"><span class="nav-text">Drawbacks of SPP-net</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#General"><span class="nav-text">General</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-Contributions"><span class="nav-text">1.2 Contributions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Architecture"><span class="nav-text">2. Architecture</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-The-RoI-pooling-layer"><span class="nav-text">2.1 The RoI pooling layer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Model"><span class="nav-text">2.2 Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-Loss-Function"><span class="nav-text">2.3 Loss Function</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Training-Test"><span class="nav-text">3. Training/Test</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-Mini-batch-sampling"><span class="nav-text">3.1 Mini-batch sampling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-Truncated-SVD"><span class="nav-text">3.2 Truncated SVD</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Discussion"><span class="nav-text">4. Discussion</span></a></li></ol></div>
             
 
           </div>
